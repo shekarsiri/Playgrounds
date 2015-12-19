@@ -6,5 +6,6 @@
         <page name='ErrorType'/>
         <page name='UIStackView'/>
         <page name='KVO'/>
+        <page name='UILayoutGuide'/>
     </pages>
 </playground>
