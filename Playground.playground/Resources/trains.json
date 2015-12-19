@@ -1,0 +1,287 @@
+{
+  "trainServices": [
+    {
+      "origin": [
+        {
+          "locationName": "Hertford North",
+          "crs": "HFN",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "16:59",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "+24TBJYiOlIPp8qHzw1cmg==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Hertford North",
+          "crs": "HFN",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "17:19",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "Wafjm/cO52jCQUomdvvlNw==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Stevenage",
+          "crs": "SVG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "17:39",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "DfaqZC9/UteoPhb/z1x90w==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Gordon Hill",
+          "crs": "GDH",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "17:49",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "zXwNmZZrFwdFxSRb7Fc++g==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Gordon Hill",
+          "crs": "GDH",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "18:04",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "NwYJmkKQkijTmlr8HYKGsA==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Stevenage",
+          "crs": "SVG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "18:09",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "JwvoT+U/A0pfcEoND0p8CA==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Gordon Hill",
+          "crs": "GDH",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "18:34",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "r8nWeQtuOBuWJqmIkzCS2Q==",
+      "adhocAlerts": null
+    },
+    {
+      "origin": [
+        {
+          "locationName": "Hertford North",
+          "crs": "HFN",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "destination": [
+        {
+          "locationName": "Moorgate",
+          "crs": "MOG",
+          "via": null,
+          "futureChangeTo": null,
+          "assocIsCancelled": false
+        }
+      ],
+      "currentOrigins": null,
+      "currentDestinations": null,
+      "sta": null,
+      "eta": null,
+      "std": "18:44",
+      "etd": "On time",
+      "platform": "1",
+      "operator": "Great Northern",
+      "operatorCode": "GN",
+      "isCircularRoute": false,
+      "filterLocationCancelled": false,
+      "serviceType": 0,
+      "serviceID": "Anl/dodObDKsAZEIPtkMzQ==",
+      "adhocAlerts": null
+    }
+  ],
+  "busServices": null,
+  "ferryServices": null,
+  "generatedAt": "2015-10-28T16:48:24.2633051+00:00",
+  "locationName": "Bowes Park",
+  "crs": "BOP",
+  "filterLocationName": "Moorgate",
+  "filtercrs": "MOG",
+  "filterType": 0,
+  "nrccMessages": null,
+  "platformAvailable": true,
+  "areServicesAvailable": true
+}

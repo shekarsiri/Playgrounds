@@ -2,6 +2,7 @@
 <playground version='6.0' target-platform='ios'>
     <pages>
         <page name='CLGeocoder'/>
+        <page name='JSON'/>
         <page name='Singletons'/>
         <page name='ErrorType'/>
         <page name='UIStackView'/>
