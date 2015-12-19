@@ -1,1 +1,2 @@
-# Xcode Playgrounds
+## Xcode Playgrounds
+Playground - noun: a place where people can play
