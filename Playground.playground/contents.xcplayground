@@ -4,5 +4,6 @@
         <page name='CLGeocoder'/>
         <page name='Singletons'/>
         <page name='ErrorType'/>
+        <page name='UIStackView'/>
     </pages>
 </playground>
