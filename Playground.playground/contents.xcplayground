@@ -8,5 +8,6 @@
         <page name='KVO'/>
         <page name='UILayoutGuide'/>
         <page name='NSLayoutAnchor'/>
+        <page name='NSURLSession'/>
     </pages>
 </playground>
