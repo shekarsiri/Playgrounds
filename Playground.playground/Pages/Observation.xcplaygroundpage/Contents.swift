@@ -1,4 +1,4 @@
-protocol PersonObserver: class {
+protocol PersonObserver {
     func ageDidUpdate(age: Int)
 }
 
@@ -12,7 +12,7 @@ struct Person {
     var personObserver: PersonObserver
 }
 
-class PersonObserverImpl: PersonObserver {
+struct PersonObserverImpl: PersonObserver {
     func ageDidUpdate(age: Int) {
         print("Updated age to \(age)")
     }
