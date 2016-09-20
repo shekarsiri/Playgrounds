@@ -1,16 +1,16 @@
-import XCPlayground
+import PlaygroundSupport
 import Foundation
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 
-let urlSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 let url = NSURL(string: "http://peteogrady.com")!
-urlSession.dataTaskWithURL(url) { (data, urlResponse, error) -> Void in
+urlSession.dataTask(with: url as URL) { (data, urlResponse, error) -> Void in
     if let urlResponse = urlResponse {
         print(urlResponse)
     }
 
-    if let data = data, html = String(data: data, encoding: NSUTF8StringEncoding) {
+    if let data = data, let html = String(data: data, encoding: String.Encoding.utf8) {
         print(html)
     }
 
@@ -18,5 +18,5 @@ urlSession.dataTaskWithURL(url) { (data, urlResponse, error) -> Void in
         print("Error: \(error.localizedDescription)")
     }
 
-    XCPlaygroundPage.currentPage.finishExecution()
+    PlaygroundPage.current.finishExecution()
 }.resume()

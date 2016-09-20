@@ -5,7 +5,7 @@ protocol PersonObserver {
 struct Person {
     var age: Int {
         didSet {
-            personObserver.ageDidUpdate(age)
+            personObserver.ageDidUpdate(age: age)
         }
     }
 

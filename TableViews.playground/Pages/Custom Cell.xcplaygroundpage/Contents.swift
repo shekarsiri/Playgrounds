@@ -1,5 +1,5 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 
 class TableViewCell: UITableViewCell {
     let titleLabel: UILabel
@@ -16,22 +16,22 @@ class TableViewCell: UITableViewCell {
         addSubview(stackView)
 
         let url = NSURL(string: "https://devimages.apple.com.edgekey.net/assets/elements/icons/96x96/swift.png")
-        let data = NSData(contentsOfURL: url!)
-        let image = UIImage(data: data!)
+        let data = NSData(contentsOf: url! as URL)
+        let image = UIImage(data: data! as Data)
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .scaleAspectFit
 
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(titleLabel)
-        stackView.leadingAnchor.constraintEqualToAnchor(leadingAnchor, constant: 8).active = true
-        stackView.trailingAnchor.constraintEqualToAnchor(trailingAnchor, constant: -8).active = true
-        stackView.topAnchor.constraintEqualToAnchor(topAnchor, constant: 8).active = true
-        stackView.bottomAnchor.constraintEqualToAnchor(bottomAnchor, constant: -8).active = true
-        stackView.axis = .Horizontal
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
+        stackView.axis = .horizontal
         stackView.spacing = 8
-        stackView.distribution = .Fill
-        stackView.alignment = .Center
+        stackView.distribution = .fill
+        stackView.alignment = .center
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +51,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 
         // Self sizing cells
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -62,17 +62,17 @@ class TableViewController: UITableViewController {
 
     // MARK: UITableViewDataSource
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.titleLabel.text = data[indexPath.row]
 
         return cell
     }
 }
 
-let tableViewController = TableViewController(style: .Plain)
-XCPlaygroundPage.currentPage.liveView = tableViewController
+let tableViewController = TableViewController(style: .plain)
+PlaygroundPage.current.liveView = tableViewController

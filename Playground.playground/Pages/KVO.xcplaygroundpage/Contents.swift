@@ -15,20 +15,20 @@ class Observer: NSObject {
     init(objectToObserve: ObjectToObserve) {
         self.objectToObserve = objectToObserve
         super.init()
-        self.objectToObserve.addObserver(self, forKeyPath: "myDate", options: .New, context: &observationContext)
+        self.objectToObserve.addObserver(self, forKeyPath: "myDate", options: .new, context: &observationContext)
     }
 
     deinit {
         objectToObserve.removeObserver(self, forKeyPath: "myDate", context: &observationContext)
     }
 
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if context == &observationContext {
-            if let newValue = change?[NSKeyValueChangeNewKey] {
+            if let newValue = change?[NSKeyValueChangeKey.newKey] {
                 print("Date changed: \(newValue)")
             }
         } else {
-            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
 }

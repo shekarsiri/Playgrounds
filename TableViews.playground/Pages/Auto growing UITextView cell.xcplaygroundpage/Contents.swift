@@ -1,5 +1,5 @@
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 
 class TableViewCell: UITableViewCell {
     let textView: UITextView
@@ -7,15 +7,15 @@ class TableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.scrollEnabled = false
+        textView.isScrollEnabled = false
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         addSubview(textView)
-        textView.leadingAnchor.constraintEqualToAnchor(leadingAnchor, constant: 8).active = true
-        textView.trailingAnchor.constraintEqualToAnchor(trailingAnchor, constant: -8).active = true
-        textView.topAnchor.constraintEqualToAnchor(topAnchor, constant: 8).active = true
-        textView.bottomAnchor.constraintEqualToAnchor(bottomAnchor, constant: -8).active = true
+        textView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
+        textView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        textView.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +29,7 @@ class TableViewController: UITableViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 
         // Self sizing cells
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -40,12 +40,12 @@ class TableViewController: UITableViewController, UITextViewDelegate {
 
     // MARK: UITableViewDataSource
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.textView.delegate = self
 
         return cell
@@ -53,11 +53,11 @@ class TableViewController: UITableViewController, UITextViewDelegate {
 
     // MARK: UITextViewDelegate
 
-    func textViewDidChange(textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         tableView.beginUpdates()
         tableView.endUpdates()
     }
 }
 
-let tableViewController = TableViewController(style: .Grouped)
-XCPlaygroundPage.currentPage.liveView = tableViewController
+let tableViewController = TableViewController(style: .grouped)
+PlaygroundPage.current.liveView = tableViewController

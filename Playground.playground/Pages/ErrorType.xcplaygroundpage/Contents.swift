@@ -1,17 +1,17 @@
-import Foundation // When imported, ErrorType becomes an NSError
+import Foundation // When imported, Error becomes an NSError
 
-enum AnotherError: ErrorType {
+enum AnotherError: Error {
     case Baz
 }
 
-enum CustomError: ErrorType {
+enum CustomError: Error {
     case Foo
     case Bar
 }
 
 func throwAnError() throws {
-    throw CustomError.Foo
-//    throw AnotherError.Baz
+//    throw CustomError.Foo
+    throw AnotherError.Baz
 }
 
 do {
